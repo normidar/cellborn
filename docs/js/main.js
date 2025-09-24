@@ -32,7 +32,6 @@ const translations = {
         'contact.info.languagesList': '日本語、中国語、英語',
         'contact.form.title': 'お問い合わせフォーム',
         'contact.form.name': 'お名前',
-        'contact.form.email': 'メールアドレス',
         'contact.form.subject': '件名',
         'contact.form.message': 'メッセージ',
         'contact.form.submit': '送信',
@@ -71,7 +70,6 @@ const translations = {
         'contact.info.languagesList': '日语、中文、英语',
         'contact.form.title': '联系表单',
         'contact.form.name': '姓名',
-        'contact.form.email': '邮箱地址',
         'contact.form.subject': '主题',
         'contact.form.message': '消息',
         'contact.form.submit': '发送',
@@ -110,7 +108,6 @@ const translations = {
         'contact.info.languagesList': 'Japanese, Chinese, English',
         'contact.form.title': 'Contact Form',
         'contact.form.name': 'Name',
-        'contact.form.email': 'Email Address',
         'contact.form.subject': 'Subject',
         'contact.form.message': 'Message',
         'contact.form.submit': 'Send',
@@ -236,22 +233,23 @@ function setupContactForm() {
             
             // フォームデータを取得
             const formData = new FormData(form);
-            const data = {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                subject: formData.get('subject'),
-                message: formData.get('message'),
-                language: currentLanguage
-            };
+            const name = formData.get('name');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
             
-            // 送信成功メッセージ（実際のAPI連携は必要に応じて実装）
-            const messages = {
-                ja: 'お問い合わせありがとうございます。後日ご連絡いたします。',
-                zh: '感谢您的咨询。我们将稍后与您联系。',
-                en: 'Thank you for your inquiry. We will contact you later.'
-            };
+            // 会社のメールアドレス（必要に応じて変更してください）
+            const companyEmail = 'normidar7@gmail.com';
             
-            alert(messages[currentLanguage]);
+            // メール本文を作成
+            const emailBody = `お名前: ${name}\n\nメッセージ:\n${message}`;
+            
+            // mailtoリンクを作成
+            const mailtoLink = `mailto:${companyEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+            
+            // メールソフトを開く
+            window.location.href = mailtoLink;
+            
+            // フォームをリセット
             form.reset();
         });
     }
