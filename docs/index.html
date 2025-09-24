@@ -3,11 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cellborn</title>
+    <title>Cellborn合同会社 - 物流・IT</title>
+    <meta name="description" content="日本と中国間の物流業務、仮想通貨技術のPoC開発を手がけるCellborn合同会社">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="icon/favicon.svg" type="image/svg+xml">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h1>Cellborn</h1>
+    <!-- ヘッダー -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="icon/favicon.svg" alt="Cellborn" class="logo-icon">
+                    <h1 class="logo-text">Cellborn</h1>
+                </div>
+                <div class="language-selector">
+                    <button class="lang-btn active" data-lang="ja">日本語</button>
+                    <button class="lang-btn" data-lang="zh">中文</button>
+                    <button class="lang-btn" data-lang="en">English</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="main">
+        <!-- ヒーロセクション -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-i18n="hero.title">革新的な物流とIT技術で<br>未来をつなぐ</h1>
+                    <p class="hero-subtitle" data-i18n="hero.subtitle">日本と中国を結ぶ物流ソリューションと、最先端の仮想通貨技術開発</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary" data-i18n="hero.contact">お問い合わせ</a>
+                        <a href="#services" class="btn btn-secondary" data-i18n="hero.services">サービス紹介</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-graphic">
+                        <i class="fas fa-shipping-fast"></i>
+                        <i class="fab fa-bitcoin"></i>
+                        <i class="fas fa-globe-asia"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 会社概要 -->
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title" data-i18n="about.title">会社概要</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 data-i18n="about.company.title">会社情報</h3>
+                        <div class="company-info">
+                            <p><strong data-i18n="about.company.name">会社名:</strong> Cellborn合同会社（セルボーン）</p>
+                            <p><strong data-i18n="about.company.location">所在地:</strong> 日本</p>
+                            <p><strong data-i18n="about.company.address">住所:</strong> <span data-i18n="about.company.addressDetail">東京都品川区八潮５丁目３－１５－１０３</span></p>
+                            <p><strong data-i18n="about.company.postal">郵便番号:</strong> 140-0003</p>
+                        </div>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3 data-i18n="about.business.title">事業内容</h3>
+                        <div class="business-info">
+                            <p><strong data-i18n="about.business.type">業種:</strong> <span data-i18n="about.business.typeDetail">物流、IT業</span></p>
+                            <ul class="business-list">
+                                <li data-i18n="about.business.logistics">中国と日本の間の物流業務</li>
+                                <li data-i18n="about.business.crypto">IT分野で仮想通貨への試み（PoC）</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- サービス -->
+        <section class="services" id="services">
+            <div class="container">
+                <h2 class="section-title" data-i18n="services.title">サービス</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <h3 data-i18n="services.logistics.title">国際物流</h3>
+                        <p data-i18n="services.logistics.description">日本と中国間の効率的な物流ソリューションを提供。通関手続きから配送まで、ワンストップでサポートいたします。</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fab fa-bitcoin"></i>
+                        </div>
+                        <h3 data-i18n="services.crypto.title">仮想通貨PoC</h3>
+                        <p data-i18n="services.crypto.description">最先端のブロックチェーン技術を活用した仮想通貨システムの概念実証（PoC）開発を行っています。</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 data-i18n="services.consulting.title">コンサルティング</h3>
+                        <p data-i18n="services.consulting.description">物流とIT技術を融合した革新的なソリューションのコンサルティングサービスを提供します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- お問い合わせ -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <h2 class="section-title" data-i18n="contact.title">お問い合わせ</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3 data-i18n="contact.info.title">連絡先情報</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p><strong data-i18n="contact.info.address">住所</strong></p>
+                                <p data-i18n="contact.info.addressDetail">〒140-0003<br>東京都品川区八潮５丁目３－１５－１０３</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-globe"></i>
+                            <div>
+                                <p><strong data-i18n="contact.info.languages">対応言語</strong></p>
+                                <p data-i18n="contact.info.languagesList">日本語、中国語、英語</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3 data-i18n="contact.form.title">お問い合わせフォーム</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name" data-i18n="contact.form.name">お名前</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-i18n="contact.form.email">メールアドレス</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" data-i18n="contact.form.subject">件名</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" data-i18n="contact.form.message">メッセージ</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" data-i18n="contact.form.submit">送信</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="icon/favicon.svg" alt="Cellborn" class="logo-icon">
+                    <span class="logo-text">Cellborn合同会社</span>
+                </div>
+                <div class="footer-info">
+                    <p data-i18n="footer.copyright">&copy; 2024 Cellborn合同会社. All rights reserved.</p>
+                    <p data-i18n="footer.address">東京都品川区八潮５丁目３－１５－１０３</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
-</html> 
+</html>
